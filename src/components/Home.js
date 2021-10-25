@@ -6,6 +6,12 @@ import background from '../assets/images/overlay.svg'
 import About from './About'
 import StarterKit from './StarterKit'
 import Dark from './Dark'
+import Theme from './Theme'
+import UserInterface from './UserInterface'
+import Plan from './Plan'
+import Contact from './Contact'
+import Purchase from './Purchase'
+import Footer from './Footer'
 function Home() {
     return (
         <>
@@ -16,6 +22,12 @@ function Home() {
         <About />
         <StarterKit />
         <Dark />
+        <Theme />
+        <UserInterface />
+        <Plan />
+        <Contact />
+        <Purchase />
+        <Footer />
         </>
     )
 }
