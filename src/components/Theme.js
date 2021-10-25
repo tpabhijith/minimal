@@ -1,8 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import background from "../assets/images/home/theme-color/grid.png"
 
 function Theme() {
+    const [colr, setColr] = useState("default");
+    // let red = "red";
+    const toggleRed = () => {
+        setColr("red");
+    }
+    const toggleBlue = () => {
+        setColr("blue");
+    }
+    const toggleCyan = () => {
+        setColr("cyan");
+    }
+    const togglePurple = () => {
+        setColr("purple");
+    }
+    const toggleOrange= () => {
+        setColr("orange");
+    }
     return (
         <MainContainer>
             <Wrapper className="wrapper">
@@ -13,26 +30,26 @@ function Theme() {
                 </Top>
                 <Bottom>
                     <InnerContainer>
-                        <ImageContainer1>
-                            <Image1 src={require("../assets/images/home/theme-color/block1-default.png").default} alt="Image1" />
+                        <ImageContainer1 >
+                            <Image1 src={require(`../assets/images/home/theme-color/block1-${colr}.png`).default} alt="Image1" />
                         </ImageContainer1>
-                        <ImageContainer2>
-                            <Image2 src={require("../assets/images/home/theme-color/block2-default.png").default} alt="Image2" />
+                        <ImageContainer2 >
+                            <Image2 src={require(`../assets/images/home/theme-color/block2-${colr}.png`).default} alt="Image2" />
                         </ImageContainer2>
-                        <ImageContainer3>
-                            <Image3 src={require("../assets/images/home/theme-color/screen-default.png").default} alt="Image3" />
+                        <ImageContainer3 >
+                            <Image3 src={require(`../assets/images/home/theme-color/screen-${colr}.png`).default} alt="Image3" />
                         </ImageContainer3>
-                        <ImageContainer4>
-                            <Image4 src={require("../assets/images/home/theme-color/sidebar-default.png").default} alt="Image4" />
+                        <ImageContainer4 >
+                            <Image4 src={require(`../assets/images/home/theme-color/sidebar-${colr}.png`).default} alt="Image4" />
                         </ImageContainer4>
                     </InnerContainer>
                     <ColorContainer>
                         <ColorDiv className="green"></ColorDiv>
-                        <ColorDiv className="blue"></ColorDiv>
-                        <ColorDiv className="light-blue"></ColorDiv>
-                        <ColorDiv className="dark-blue"></ColorDiv>
-                        <ColorDiv className="orange"></ColorDiv>
-                        <ColorDiv className="red"></ColorDiv>
+                        <ColorDiv className="blue" onClick={togglePurple}></ColorDiv>
+                        <ColorDiv className="light-blue" onClick={toggleCyan}></ColorDiv>
+                        <ColorDiv className="dark-blue" onClick={toggleBlue}></ColorDiv>
+                        <ColorDiv className="orange"onClick={toggleOrange}></ColorDiv>
+                        <ColorDiv className="red" onClick={toggleRed}></ColorDiv>
                     </ColorContainer>
                 </Bottom>
             </Wrapper>
@@ -78,6 +95,9 @@ const Image1 = styled.img`
     width: 100%;
     display: block;
     z-index: 3;
+    animation-name: kumar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 `;
 const ImageContainer2 = styled.div``;
 const Image2 = styled.img`
@@ -85,12 +105,16 @@ const Image2 = styled.img`
     width: 100%;
     display: block;
     z-index: 3;
+    animation-name: kumar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 `;
 const ImageContainer3 = styled.div``;
 const Image3 = styled.img`
     position: absolute;
     width: 100%;
     display: block;
+    
    
 `;
 const ImageContainer4 = styled.div``;
@@ -99,6 +123,9 @@ const Image4 = styled.img`
     width: 100%;
     display: block;
     z-index: 3;
+    animation-name: kumar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 `;
 const ColorContainer = styled.div`
     width: 10%;

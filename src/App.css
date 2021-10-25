@@ -22,3 +22,15 @@ body {
 ol, ul {
 	list-style: none;
 }
+@keyframes kumar{
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(10px);
+		/* transform: ; */
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
