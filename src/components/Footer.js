@@ -39,5 +39,6 @@ const LinkSpan = styled.span`
 const LinkItem = styled.span`
     font-size: 14px;
     color: #4eac56;
+    cursor: pointer;
 `;
 export default Footer

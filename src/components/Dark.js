@@ -29,42 +29,74 @@ const MainContainer = styled.div`
     background-size: contain;
     height: 600px;
     background-color: #161c24;
+    @media all and (max-width:1080px) {
+        margin-top: 100px;
+    }
 `;
 const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media all and (max-width:980px) {
+        flex-direction: column;
+    }
 `;
 const Left = styled.div`
     width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    @media all and (max-width:980px) {
+        margin-top: 40px;
+    }
 `;
 const ImageContainer1 = styled.div`
     width: 700px;
-    position: relative;
+    position: absolute;
+    left: 0px;
+    @media all and (max-width:1080px) {
+        width: 500px;
+        left: 20px;
+    }
+    @media all and (max-width:980px) {
+        top: 150px;
+    }
 `;
 const Image1 = styled.img`
     width: 100%;
     display: block;
-    position: absolute;
-    left: 140px;
 `;
 const ImageContainer2 = styled.div`
     width: 700px;
-    position: relative;
+    position: absolute;
+    left: 100px;
+    top: -150px;
+    @media all and (max-width:1080px) {
+        width: 500px;
+        top: -100px;
+        left: 60px;
+    }
+    @media all and (max-width:980px) {
+        top: 200px;
+    }
 `;
 const Image2 = styled.img`
     width: 100%;
     display: block;
-    position: absolute;
-    left: -250px;
 `;
 const Right = styled.div`
     width: 30%;
     margin-top: 280px;
-`;
+    @media all and (max-width:1080px) {
+        margin-top: 200px;
+    }
+    @media all and (max-width:980px) {
+        width: 80%;
+        text-align: center;
+        margin: 0  auto;
+    }
+`; 
 const SubHeading = styled.h5`
     font-size: 20px;
     font-weight: 500;

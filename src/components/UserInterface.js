@@ -56,6 +56,10 @@ const Wrapper = styled.div`
 const Left = styled.div`
     width: 35%;
     position: absolute;
+    z-index: 3;
+    @media all and (max-width:1080px) {
+        width: 40%;
+    }
 `;
 const SubHeading = styled.h5`
     font-size: 20px;
@@ -69,12 +73,6 @@ const Heading = styled.h3`
 const Right = styled.div`
     position: relative;
     width: 90%;
-`;
-const ImageContainer10 = styled.div``;
-const Image10 = styled.img`
-    position: absolute;
-    top: 0;
-    left:0;
 `;
 const ImageContainer = styled.div``;
 const Image = styled.img`

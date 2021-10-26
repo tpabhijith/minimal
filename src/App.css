@@ -22,15 +22,28 @@ body {
 ol, ul {
 	list-style: none;
 }
-@keyframes kumar{
+@keyframes updown{
 	0%{
 		transform: translateY(0px);
 	}
 	50%{
 		transform: translateY(10px);
-		/* transform: ; */
 	}
 	100%{
 		transform: translateY(0px);
 	}
+}
+@keyframes myanimation {
+  0% {
+    background-color: transparent;
+    color: transparent;
+  }
+  35% {
+    background-color: gray;
+    color: rosybrown;
+  }
+  100% {
+    background-color: gray;
+    color: rosybrown;
+  }
 }

@@ -46,6 +46,9 @@ function About() {
 }
 const MainContainer = styled.div`
     padding: 100px 0;
+    @media all and (max-width:1080px) {
+       padding-bottom: 0px;
+    }
 `;
 const Wrapper = styled.div``;
 const Top = styled.div`
@@ -64,10 +67,19 @@ const Bottom = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
+    @media all and (max-width:980px) {
+        flex-direction: column;
+    }
 `;
 const Left = styled.div`
     width: 30%;
-   
+    @media all and (max-width:1080px) {
+        width: 33%;
+    }
+    @media all and (max-width:980px) {
+        width: 80%;
+        height: unset;
+    }
 `;
 const ContentBox = styled.div`
     width: 90%;
@@ -82,21 +94,35 @@ const ContentBox = styled.div`
     position: relative;
     top: 30px;
     left: 0px;
+    @media all and (max-width:1080px) {
+        position: unset;
+        height: unset;
+        margin-bottom: 30px;
+    }
     &.middle {
         background: #fff;
-        box-shadow: -12px 9px 54px -13px rgba(0,0,0,0.75);
+        box-shadow: -14px 9px 50px -33px rgb(0 0 0 / 75%);
         padding: 10px;
         position: absolute;
         top: -230px;
         left: 15px;
+        @media all and (max-width:1080px) {
+            position: unset;
+        }
     }
     &.last {
         top:50px;
+        @media all and (max-width:1080px) {
+            position: unset;
+        }
     }
 `;
 const ImageConatiner = styled.div`
     width: 40px;
     margin:60px auto;
+    @media all and (max-width:980px) {
+        width: 100px;
+    }
 `;
 const LogoImage = styled.img`
     width: 100%;
@@ -109,20 +135,43 @@ const InnerContentBox = styled.div`
         margin: auto;
         height: 400px;
         border-radius: 25px;
-        box-shadow: -12px 9px 29px -13px rgba(0,0,0,0.75);
+        box-shadow: -14px 9px 50px -33px rgb(0 0 0 / 75%);
 `;
 const ContentHeading = styled.div`
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 30px;
+    @media all and (max-width:980px) {
+        font-size: 30px;
+    }
 `;
-const Description = styled.div``;
+const Description = styled.div`
+    @media all and (max-width:980px) {
+        font-size: 24px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+`;
 const Middle = styled.div`
     width: 30%;
     position: relative;
+    @media all and (max-width:1080px) {
+        width: 33%;
+    }
+    @media all and (max-width:980px) {
+        width: 80%;
+        height: unset;
+    }
 `;
 const Right = styled.div`
     width: 30%;
+    @media all and (max-width:1080px) {
+        width: 33%;
+    }
+    @media all and (max-width:980px) {
+        width: 80%;
+        height: unset;
+    }
 `;
 
 export default About

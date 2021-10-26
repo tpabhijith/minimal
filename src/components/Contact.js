@@ -34,9 +34,12 @@ const Button = styled.button`
     border-radius: 10px;
     color: #4eac56;
     font-size: 18px;
+    cursor: pointer;
+    transition: all ease-in .5s;
     &:hover {
         color: #fff;
         background: #4eac56;
+        transition: all ease-in .5s;
     }
 `;
 export default Contact

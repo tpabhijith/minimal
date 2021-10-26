@@ -5,6 +5,9 @@ import background from "../assets/images/home/theme-color/grid.png"
 function Theme() {
     const [colr, setColr] = useState("default");
     // let red = "red";
+    const toggleGreen = () => {
+        setColr("default");
+    }
     const toggleRed = () => {
         setColr("red");
     }
@@ -44,12 +47,12 @@ function Theme() {
                         </ImageContainer4>
                     </InnerContainer>
                     <ColorContainer>
-                        <ColorDiv className="green"></ColorDiv>
-                        <ColorDiv className="blue" onClick={togglePurple}></ColorDiv>
-                        <ColorDiv className="light-blue" onClick={toggleCyan}></ColorDiv>
-                        <ColorDiv className="dark-blue" onClick={toggleBlue}></ColorDiv>
-                        <ColorDiv className="orange"onClick={toggleOrange}></ColorDiv>
-                        <ColorDiv className="red" onClick={toggleRed}></ColorDiv>
+                        <ColorDivContainer><ColorDiv className="green" onClick={toggleGreen}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="purple" onClick={togglePurple}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="cyan" onClick={toggleCyan}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="blue" onClick={toggleBlue}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="orange"onClick={toggleOrange}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="red" onClick={toggleRed}></ColorDiv></ColorDivContainer>  
                     </ColorContainer>
                 </Bottom>
             </Wrapper>
@@ -95,7 +98,7 @@ const Image1 = styled.img`
     width: 100%;
     display: block;
     z-index: 3;
-    animation-name: kumar;
+    animation-name: updown;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 `;
@@ -105,7 +108,7 @@ const Image2 = styled.img`
     width: 100%;
     display: block;
     z-index: 3;
-    animation-name: kumar;
+    animation-name: updown;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 `;
@@ -123,86 +126,54 @@ const Image4 = styled.img`
     width: 100%;
     display: block;
     z-index: 3;
-    animation-name: kumar;
+    animation-name: updown;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 `;
 const ColorContainer = styled.div`
     width: 10%;
 `;
+const ColorDivContainer = styled.div`
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 const ColorDiv = styled.div`
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    margin:20px 0;
+    /* margin:30px 0; */
     cursor: pointer;
     
     &.green {
         background: #4eac56;
         position: relative;
+        transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         &::after {
             content: "";
             width: 20px;
             height: 20px;
             border: 3px solid #4eac56;
             border-radius: 50%;
-            /* display: inline-block; */
             position: absolute;
-            top: -8px;
-            left: -8px;
+            top: -6px;
+            left: -6px;
             display: none;
         }
         &:hover {
+            width: 14px;
+            height: 14px;
             &::after {
                 display: inline-block;
             }
         }
     }
     &.blue {
-        background: #7742dc;
-        position: relative;
-        &::after {
-            content: "";
-            width: 20px;
-            height: 20px;
-            border: 3px solid #7742dc;
-            border-radius: 50%;
-            /* display: inline-block; */
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            display: none;
-        }
-        &:hover {
-            &::after {
-                display: inline-block;
-            }
-        }
-    }
-    &.light-blue {
-        background: #52caf9;
-        position: relative;
-        &::after {
-            content: "";
-            width: 20px;
-            height: 20px;
-            border: 3px solid #52caf9;
-            border-radius: 50%;
-            /* display: inline-block; */
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            display: none;
-        }
-        &:hover {
-            &::after {
-                display: inline-block;
-            }
-        }
-    }
-    &.dark-blue {
         background: #0b45f5;
         position: relative;
+        transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         &::after {
             content: "";
             width: 20px;
@@ -211,11 +182,61 @@ const ColorDiv = styled.div`
             border-radius: 50%;
             /* display: inline-block; */
             position: absolute;
-            top: -8px;
-            left: -8px;
+            top: -6px;
+            left: -6px;
             display: none;
         }
         &:hover {
+            width: 14px;
+            height: 14px;
+            &::after {
+                display: inline-block;
+            }
+        }
+    }
+    &.cyan {
+        background: #52caf9;
+        position: relative;
+        transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 3px solid #52caf9;
+            border-radius: 50%;
+            /* display: inline-block; */
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            display: none;
+        }
+        &:hover {
+            width: 14px;
+            height: 14px;
+            &::after {
+                display: inline-block;
+            }
+        }
+    }
+    &.purple {
+        background: #7742dc;
+        position: relative;
+        transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 3px solid #7742dc;
+            border-radius: 50%;
+            /* display: inline-block; */
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            display: none;
+        }
+        &:hover {
+            width: 14px;
+            height: 14px;
             &::after {
                 display: inline-block;
             }
@@ -224,6 +245,7 @@ const ColorDiv = styled.div`
     &.orange {
         background: #f5a941;
         position: relative;
+        transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         &::after {
             content: "";
             width: 20px;
@@ -232,11 +254,13 @@ const ColorDiv = styled.div`
             border-radius: 50%;
             /* display: inline-block; */
             position: absolute;
-            top: -8px;
-            left: -8px;
+            top: -6px;
+            left: -6px;
             display: none;
         }
         &:hover {
+            width: 14px;
+            height: 14px;
             &::after {
                 display: inline-block;
             }
@@ -245,6 +269,7 @@ const ColorDiv = styled.div`
     &.red {
         background: #ed3833;
         position: relative;
+        transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         &::after {
             content: "";
             width: 20px;
@@ -253,11 +278,13 @@ const ColorDiv = styled.div`
             border-radius: 50%;
             /* display: inline-block; */
             position: absolute;
-            top: -8px;
-            left: -8px;
+            top: -6px;
+            left: -6px;
             display: none;
         }
         &:hover {
+            width: 14px;
+            height: 14px;
             &::after {
                 display: inline-block;
             }

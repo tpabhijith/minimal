@@ -51,10 +51,14 @@ const Button = styled.button`
     padding: 12px 24px;
     background: #fff;
     font-size: 18px;
+    font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
+    transition: all ease-in .5s;
     &:hover {
         box-shadow: -13px 47px 75px 19px rgba(54,158,12,1);
+        color: #4eac56;
+        transition: all ease-in .5s;
     }
 `;
 

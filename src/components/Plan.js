@@ -207,6 +207,9 @@ const Heading = styled.h3`
     font-size: 44px;
     font-weight: 700;
     margin-bottom: 20px;
+    @media all and (max-width:1080px) {
+       font-size: 36px;
+    }
 `;
 const Description = styled.p`
     font-size: 18px;
@@ -225,8 +228,10 @@ const ContentBox = styled.div`
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0px 2px 30px -10px rgba(110,104,110,0.8);
+    transition: all ease-in .5s;
     &:hover {
         box-shadow: 0px 2px 30px 0px rgba(110,104,110,0.8);
+        transition: all ease-in .5s;
     }
 `;
 const TopBox = styled.div`
@@ -237,18 +242,39 @@ const BoxSubHeading = styled.h5`
     color: #818d9a;
     font-weight: 500;
     margin-bottom: 20px;
+    @media all and (max-width:1080px) {
+        font-size: 18px;
+    }
+    @media all and (max-width:980px) {
+        font-size: 14px;
+    }
 `;
 const BoxHeading = styled.h3`
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
+    @media all and (max-width:1080px) {
+        font-size: 30px;
+    }
+    @media all and (max-width:980px) {
+        font-size: 24px;
+    }
+    
 `;
 const ImageContentBox = styled.div`
     margin-bottom: 20px;
 `;
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+    width: 20%;
+    display: flex;
+    @media all and (max-width: 1080px) {
+        width: 15%;
+    }
+`;
 const Image = styled.img`
     margin-right: 20px;
+    width: 100%;
+    display: block;
 `;
 const MiddleBox = styled.div`
     width: 100%;
@@ -320,10 +346,12 @@ const Button = styled.button`
     width: 100%;
     font-size: 18px;
     font-weight: 600;
+    transition: all ease-in .5s;
     &:hover {
         background: #4eac56;
         color: #fff;
         box-shadow: 0px 2px 30px 0px rgba(110,104,110,0.8);
+        transition: all ease-in .5s;
     }
     cursor: pointer;
 `;

@@ -59,6 +59,9 @@ const Heading = styled.h3`
     font-weight: 700;
     width: 70%;
     color: #fff;
+    @media all and (max-width:1080px) {
+        width: 85%;
+    }
 `;
 const Color = styled.span`
     display: inline-block;
@@ -93,6 +96,13 @@ const PreviewButton = styled.button`
     font-size: 20px;
     cursor: pointer;
     margin: 30px 0;
+    transition: all ease-in .5s;
+    &:hover {
+        color:#4eac56;
+        background: #fff;
+        cursor: pointer;
+        transition: all ease-in .5s;
+    }
 `;
 const ListItems = styled.ul`
     display: flex;

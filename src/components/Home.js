@@ -33,7 +33,7 @@ function Home() {
 }
 const MainContainer = styled.div`
     background-image: url(${background}); 
-    
+    background-size: cover;
     
 `;
 

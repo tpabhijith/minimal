@@ -1,9 +1,26 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 
 function Header() {
+    const [header, setHeader] = useState("header")
+
+    const listenScrollEvent = (event) => {
+        if (window.scrollY < 73) {
+            return setHeader("header")
+        } else if (window.scrollY > 70) {
+            return setHeader("header2")
+        } 
+        }
+
+    useEffect(() => {
+        window.addEventListener('scroll', listenScrollEvent);
+
+        return () =>
+            window.removeEventListener('scroll', listenScrollEvent);
+        }, []);
+
     return (
-       <MainContainer>
+       <MainContainer className={header}>
            <Wrapper className="wrapper">
                 <Left>
                     <LogoImageContainer>
@@ -35,12 +52,42 @@ function Header() {
     )
 }
 const MainContainer = styled.div`
-    padding-top: 30px;
+    z-index: 1000;
+    &.header {
+        position: absolute;
+        top: -28px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 120px;
+        color: #333;
+        transform: translateY(0);
+        transition: transform 0.6s ease;
+    }
+    &.header2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 86px;
+        background-color: gray;
+        color: #000;
+        transform: translateY(10);
+        transition: transform 6s ease;
+        animation: myanimation 3s;
+    }
 `;
 const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    left: 80px;
 `;
 const Right = styled.div`
     width: 70%;
@@ -74,6 +121,7 @@ const ListItems = styled.ul`
 const ListItem = styled.li`
     margin-right: 30px;
     color: #fff;
+    transition: all ease-in .5s;
     &:last-child {
         margin-right: 0;
         padding: 12px 24px;
@@ -82,15 +130,23 @@ const ListItem = styled.li`
         border-radius: 10px;
         &:hover {
             background: #fff;
+            transition: all ease-in .5s;
+        }
+        @media all and (max-width:1080px) {
+            display: none;
         }
     }
     font-size: 18px;
     font-weight: 500;
+    @media all and (max-width:980px) {
+       font-size: 16px;
+       font-weight: normal;
+    }
     &:hover {
         color:#4eac56;
         cursor: pointer;
+        transition: all ease-in .5s;
     }
-
 `;
 
 export default Header
