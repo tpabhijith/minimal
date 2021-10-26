@@ -32,6 +32,9 @@ const MainContainer = styled.div`
     @media all and (max-width:1080px) {
         margin-top: 100px;
     }
+    @media all and (max-width:480px) {
+        height: unset;
+    }
 `;
 const Wrapper = styled.div`
     display: flex;
@@ -50,6 +53,9 @@ const Left = styled.div`
     @media all and (max-width:980px) {
         margin-top: 40px;
     }
+    @media all and (max-width:480px) {
+        display: none;
+    }
 `;
 const ImageContainer1 = styled.div`
     width: 700px;
@@ -61,6 +67,16 @@ const ImageContainer1 = styled.div`
     }
     @media all and (max-width:980px) {
         top: 150px;
+    }
+    @media all and (max-width:768px) {
+        left: -40px;
+        width: 500px;
+    }
+    @media all and (max-width:640px) {
+       width: 400px;
+    }
+    @media all and (max-width:540px) {
+        width: 350px;
     }
 `;
 const Image1 = styled.img`
@@ -79,6 +95,17 @@ const ImageContainer2 = styled.div`
     }
     @media all and (max-width:980px) {
         top: 200px;
+    }
+    @media all and (max-width:768px) {
+        left: -80px;
+        width: 500px;
+    }
+    @media all and (max-width:640px) {
+       width: 400px;
+       left: 0px;
+    }
+    @media all and (max-width:540px) {
+        width: 350px;
     }
 `;
 const Image2 = styled.img`

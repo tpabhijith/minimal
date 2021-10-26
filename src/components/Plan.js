@@ -219,6 +219,10 @@ const Bottom = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media all and (max-width:840px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 const ContentBox = styled.div`
     width: 30%;
@@ -232,6 +236,16 @@ const ContentBox = styled.div`
     &:hover {
         box-shadow: 0px 2px 30px 0px rgba(110,104,110,0.8);
         transition: all ease-in .5s;
+    }
+    @media all and (max-width:840px) {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    @media all and (max-width:768px) {
+        width: 60%;
+    }
+    @media all and (max-width:540px) {
+        width: 80%;
     }
 `;
 const TopBox = styled.div`

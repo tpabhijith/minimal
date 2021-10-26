@@ -80,6 +80,12 @@ const Left = styled.div`
         width: 80%;
         height: unset;
     }
+    @media all and (max-width:540px) {
+        width: 90%;
+    }
+    @media all and (max-width:480px) {
+        width: 100%;
+    }
 `;
 const ContentBox = styled.div`
     width: 90%;
@@ -123,6 +129,9 @@ const ImageConatiner = styled.div`
     @media all and (max-width:980px) {
         width: 100px;
     }
+    @media all and (max-width:480px) {
+        width: 40px;
+    }
 `;
 const LogoImage = styled.img`
     width: 100%;
@@ -151,6 +160,9 @@ const Description = styled.div`
         font-weight: normal;
         margin-bottom: 30px;
     }
+    @media all and (max-width:480px) {
+        font-size: 16px;
+    }
 `;
 const Middle = styled.div`
     width: 30%;
@@ -162,6 +174,12 @@ const Middle = styled.div`
         width: 80%;
         height: unset;
     }
+    @media all and (max-width:540px) {
+        width: 90%;
+    }
+    @media all and (max-width:480px) {
+        width: 100%;
+    }
 `;
 const Right = styled.div`
     width: 30%;
@@ -171,6 +189,12 @@ const Right = styled.div`
     @media all and (max-width:980px) {
         width: 80%;
         height: unset;
+    }
+    @media all and (max-width:540px) {
+        width: 90%;
+    }
+    @media all and (max-width:480px) {
+        width: 100%;
     }
 `;
 

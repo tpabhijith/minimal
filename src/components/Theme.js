@@ -90,7 +90,7 @@ const Bottom = styled.div`
 `;
 const InnerContainer = styled.div`
     position: relative;
-    width: 90%;
+    width: 100%;
 `;
 const ImageContainer1 = styled.div``;
 const Image1 = styled.img`
@@ -117,8 +117,6 @@ const Image3 = styled.img`
     position: absolute;
     width: 100%;
     display: block;
-    
-   
 `;
 const ImageContainer4 = styled.div``;
 const Image4 = styled.img`
@@ -139,14 +137,15 @@ const ColorDivContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media all and (max-width:540px) {
+        margin-right: 20px;
+    }
 `;
 const ColorDiv = styled.div`
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    /* margin:30px 0; */
     cursor: pointer;
-    
     &.green {
         background: #4eac56;
         position: relative;
@@ -180,7 +179,6 @@ const ColorDiv = styled.div`
             height: 20px;
             border: 3px solid #0b45f5;
             border-radius: 50%;
-            /* display: inline-block; */
             position: absolute;
             top: -6px;
             left: -6px;
@@ -204,7 +202,6 @@ const ColorDiv = styled.div`
             height: 20px;
             border: 3px solid #52caf9;
             border-radius: 50%;
-            /* display: inline-block; */
             position: absolute;
             top: -6px;
             left: -6px;
@@ -228,7 +225,6 @@ const ColorDiv = styled.div`
             height: 20px;
             border: 3px solid #7742dc;
             border-radius: 50%;
-            /* display: inline-block; */
             position: absolute;
             top: -6px;
             left: -6px;
@@ -252,7 +248,6 @@ const ColorDiv = styled.div`
             height: 20px;
             border: 3px solid #f5a941;
             border-radius: 50%;
-            /* display: inline-block; */
             position: absolute;
             top: -6px;
             left: -6px;
@@ -276,7 +271,6 @@ const ColorDiv = styled.div`
             height: 20px;
             border: 3px solid #ed3833;
             border-radius: 50%;
-            /* display: inline-block; */
             position: absolute;
             top: -6px;
             left: -6px;

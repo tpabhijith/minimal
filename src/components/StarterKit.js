@@ -30,6 +30,9 @@ const MainContainer = styled.div`
     @media all and (max-width:980px) {
         margin-bottom: 500px;
     }
+    @media all and (max-width:480px) {
+        margin-bottom:0;
+    }
 `;
 const Wrapper = styled.div`
     display: flex;
@@ -85,6 +88,9 @@ const Right = styled.div`
     width:60%;
     position: relative;
     /* z-index: 5; */
+    @media all and (max-width:480px) {
+        display: none;
+    }
 `;
 const ImageContainer1 = styled.div`
     width: 40%;
@@ -103,6 +109,13 @@ const ImageContainer1 = styled.div`
         width: 40%;
         transform: skewY(10deg);
         left: 0;
+    }
+    @media all and (max-width:768px) {
+        width: 50%;
+        left: -70px;
+    }
+    @media all and (max-width:540px) {
+        width: 60%;
     }
 
 `;
@@ -130,6 +143,14 @@ const ImageContainer2 = styled.div`
         transform: skewY(10deg);
         left: 160px;
     }
+    @media all and (max-width:768px) {
+        width: 50%;
+        left: 90px;
+    }
+    @media all and (max-width:540px) {
+        width: 60%;
+        left: 40px;
+    }
 `;
 const Image2 = styled.img`
     display: block;
@@ -154,6 +175,14 @@ const ImageContainer3 = styled.div`
         width: 40%;
         transform: skewY(10deg);
         left: 320px;
+    }
+    @media all and (max-width:768px) {
+        width: 50%;
+        left: 250px;
+    }
+    @media all and (max-width:540px) {
+        width: 60%;
+        left:160px;
     }
 `;
 const Image3 = styled.img`

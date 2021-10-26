@@ -53,6 +53,9 @@ const Wrapper = styled.div`
 `;
 const Left = styled.div`
     width: 50%;
+    @media all and (max-width:840px) {
+        width: 100%;
+    }
 `;
 const Heading = styled.h3`
     font-size: 60px;
@@ -62,12 +65,21 @@ const Heading = styled.h3`
     @media all and (max-width:1080px) {
         width: 85%;
     }
+    @media all and (max-width:540px) {
+        font-size: 50px;
+    }
+    @media all and (max-width:480px) {
+        font-size: 44px;
+    }
 `;
 const Color = styled.span`
     display: inline-block;
     font-size: 60px;
     font-weight: 700;
     color: #4eac56;
+    @media all and (max-width:480px) {
+        font-size: 44px;
+    }
 `;
 const Description = styled.p`
     margin: 30px 0;
@@ -114,10 +126,24 @@ const ListItem = styled.li`
     &:last-child {
         margin-right: 0;
     }
+    @media all and (max-width:480px) {
+        width: 10%;
+    }
 `;
 const ListItemLogo = styled.img``;
 const Right = styled.div`
     width: 50%;
+    @media all and (max-width:840px) {
+        width: 80%;
+        position: absolute;
+        top:50px;
+        left: 100px;
+    }
+    @media all and (max-width:640px) {
+       width: 90%;
+       top: 80px;
+       left: 60px;
+    }
 `;
 const ImageContainer = styled.div`
     width: 90%;

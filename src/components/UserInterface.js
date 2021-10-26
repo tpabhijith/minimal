@@ -60,6 +60,12 @@ const Left = styled.div`
     @media all and (max-width:1080px) {
         width: 40%;
     }
+    @media all and (max-width:768px) {
+        width: 60%;
+    }
+    @media all and (max-width:640px) {
+       width: 80%;
+    }
 `;
 const SubHeading = styled.h5`
     font-size: 20px;
@@ -69,6 +75,9 @@ const SubHeading = styled.h5`
 const Heading = styled.h3`
     font-size: 44px;
     font-weight: 700;
+    @media all and (max-width:480px) {
+        font-size: 36px;
+    }
 `;
 const Right = styled.div`
     position: relative;

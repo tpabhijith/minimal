@@ -65,6 +65,23 @@ const MainContainer = styled.div`
         color: #333;
         transform: translateY(0);
         transition: transform 0.6s ease;
+      
+    }
+    @media all and (max-width:640px) {
+        &.header {
+        position: absolute;
+        top: -28px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 120px;
+        color: #333;
+        transform: translateY(0);
+        transition: transform 0.6s ease;
+      
+    }
     }
     &.header2 {
         position: fixed;
@@ -80,17 +97,23 @@ const MainContainer = styled.div`
         transform: translateY(10);
         transition: transform 6s ease;
         animation: myanimation 3s;
+        @media all and (max-width:640px) {
+       display: none;
+    }
     }
 `;
 const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    left: 80px;
+    /* position: fixed; */
+    /* left: 80px; */
 `;
 const Right = styled.div`
     width: 70%;
+    @media all and (max-width:640px) {
+       display: none;
+    }
 `;
 const LogoImageContainer = styled.div`
     width: 50px;
@@ -112,6 +135,9 @@ const Left = styled.div`
     width: 30%;
     display: flex;
     align-items: center;
+    @media all and (max-width:480px) {
+       width: 50%;
+    }
 `;
 const ListItems = styled.ul`
     display: flex;
