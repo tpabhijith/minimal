@@ -45,6 +45,7 @@ function About() {
     )
 }
 const MainContainer = styled.div`
+    background: #fff;
     padding: 100px 0;
     @media all and (max-width:1080px) {
        padding-bottom: 0px;

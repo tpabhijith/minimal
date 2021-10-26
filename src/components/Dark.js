@@ -27,10 +27,12 @@ const MainContainer = styled.div`
     margin-top: 350px; 
     background:url(${background}) no-repeat right;
     background-size: contain;
-    height: 600px;
     background-color: #161c24;
     @media all and (max-width:1080px) {
         margin-top: 100px;
+    }
+    @media all and (max-width:980px) {
+        height: 600px;
     }
     @media all and (max-width:480px) {
         height: unset;
@@ -58,9 +60,10 @@ const Left = styled.div`
     }
 `;
 const ImageContainer1 = styled.div`
-    width: 700px;
+    width: 500px;
     position: absolute;
     left: 0px;
+    top: -230px;
     @media all and (max-width:1080px) {
         width: 500px;
         left: 20px;
@@ -84,7 +87,7 @@ const Image1 = styled.img`
     display: block;
 `;
 const ImageContainer2 = styled.div`
-    width: 700px;
+    width: 500px;
     position: absolute;
     left: 100px;
     top: -150px;
@@ -114,7 +117,8 @@ const Image2 = styled.img`
 `;
 const Right = styled.div`
     width: 30%;
-    margin-top: 280px;
+    margin-top: 200px;
+    padding-bottom: 200px;
     @media all and (max-width:1080px) {
         margin-top: 200px;
     }
