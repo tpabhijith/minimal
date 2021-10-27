@@ -146,6 +146,7 @@ const ListItems = styled.ul`
 `;
 const ListItem = styled.li`
     margin-right: 30px;
+    /* font-size: 16px; */
     color: #fff;
     transition: all ease-in .5s;
     &:last-child {

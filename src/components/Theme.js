@@ -4,7 +4,6 @@ import background from "../assets/images/home/theme-color/grid.png"
 
 function Theme() {
     const [colr, setColr] = useState("default");
-    // let red = "red";
     const toggleGreen = () => {
         setColr("default");
     }
@@ -47,12 +46,12 @@ function Theme() {
                         </ImageContainer4>
                     </InnerContainer>
                     <ColorContainer>
-                        <ColorDivContainer><ColorDiv className="green" onClick={toggleGreen}></ColorDiv></ColorDivContainer>
-                        <ColorDivContainer><ColorDiv className="purple" onClick={togglePurple}></ColorDiv></ColorDivContainer>
-                        <ColorDivContainer><ColorDiv className="cyan" onClick={toggleCyan}></ColorDiv></ColorDivContainer>
-                        <ColorDivContainer><ColorDiv className="blue" onClick={toggleBlue}></ColorDiv></ColorDivContainer>
-                        <ColorDivContainer><ColorDiv className="orange"onClick={toggleOrange}></ColorDiv></ColorDivContainer>
-                        <ColorDivContainer><ColorDiv className="red" onClick={toggleRed}></ColorDiv></ColorDivContainer>  
+                        <ColorDivContainer><ColorDiv className="green" colr={colr} onClick={()=>(toggleGreen() )}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="purple" colr={colr} onClick={()=>(togglePurple())}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="cyan" colr={colr}  onClick={toggleCyan}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="blue" colr={colr}  onClick={toggleBlue}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="orange" colr={colr} onClick={toggleOrange}></ColorDiv></ColorDivContainer>
+                        <ColorDivContainer><ColorDiv className="red" colr={colr}  onClick={toggleRed}></ColorDiv></ColorDivContainer>  
                     </ColorContainer>
                 </Bottom>
             </Wrapper>
@@ -142,8 +141,8 @@ const ColorDivContainer = styled.div`
     }
 `;
 const ColorDiv = styled.div`
-    height: 10px;
-    width: 10px;
+    height: 14px;
+    width: 14px;
     border-radius: 50%;
     cursor: pointer;
     &.green {
@@ -159,15 +158,15 @@ const ColorDiv = styled.div`
             position: absolute;
             top: -6px;
             left: -6px;
-            display: none;
+            display: ${({colr})=> (colr == "default") ? 'block' : 'none'};
         }
-        &:hover {
+        /* &:hover {
             width: 14px;
             height: 14px;
             &::after {
                 display: inline-block;
             }
-        }
+        } */
     }
     &.blue {
         background: #0b45f5;
@@ -182,15 +181,15 @@ const ColorDiv = styled.div`
             position: absolute;
             top: -6px;
             left: -6px;
-            display: none;
+            display: ${({colr})=> (colr == "blue") ? 'block' : 'none'};
         }
-        &:hover {
+        /* &:hover {
             width: 14px;
             height: 14px;
             &::after {
                 display: inline-block;
             }
-        }
+        } */
     }
     &.cyan {
         background: #52caf9;
@@ -205,15 +204,15 @@ const ColorDiv = styled.div`
             position: absolute;
             top: -6px;
             left: -6px;
-            display: none;
+            display: ${({colr})=> (colr == "cyan") ? 'block' : 'none'};
         }
-        &:hover {
+        /* &:hover {
             width: 14px;
             height: 14px;
             &::after {
                 display: inline-block;
             }
-        }
+        } */
     }
     &.purple {
         background: #7742dc;
@@ -228,15 +227,15 @@ const ColorDiv = styled.div`
             position: absolute;
             top: -6px;
             left: -6px;
-            display: none;
+            display: ${({colr})=> (colr == "purple") ? 'block' : 'none'};
         }
-        &:hover {
+        /* &:hover {
             width: 14px;
             height: 14px;
             &::after {
                 display: inline-block;
             }
-        }
+        } */
     }
     &.orange {
         background: #f5a941;
@@ -251,15 +250,15 @@ const ColorDiv = styled.div`
             position: absolute;
             top: -6px;
             left: -6px;
-            display: none;
+            display: ${({colr})=> (colr == "orange") ? 'block' : 'none'};
         }
-        &:hover {
+        /* &:hover {
             width: 14px;
             height: 14px;
             &::after {
                 display: inline-block;
             }
-        }
+        } */
     }
     &.red {
         background: #ed3833;
@@ -274,15 +273,15 @@ const ColorDiv = styled.div`
             position: absolute;
             top: -6px;
             left: -6px;
-            display: none;
+            display: ${({colr})=> (colr == "red") ? 'block' : 'none'};
         }
-        &:hover {
+        /* &:hover {
             width: 14px;
             height: 14px;
             &::after {
                 display: inline-block;
             }
-        }
+        } */
     }
 `;
 
